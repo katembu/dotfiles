@@ -1,0 +1,56 @@
+# in screen sessions activate virtualenv
+if [ "$VIRTUAL_ENV" ]; then
+    . $VIRTUAL_ENV/bin/activate
+else
+    # virtualenv wrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/dev
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+#auto workon virtualenv
+exec_myshellscripts() {
+    #/usr/bin/cd $@
+    if [[ -n ${VIRTUAL_ENV-} ]]; then
+      #UK_CENV=$VIRTUAL_ENV
+      if [ -f .venv ]; then
+        if [[ ${VIRTUAL_ENV/$WORKON_HOME\/} != `cat .venv` ]]; then
+          workon `cat .venv`
+        fi
+      fi
+    else
+      if [ -f .venv ]; then
+        workon `cat .venv`
+      fi
+      #if [ -f .mysh ]; then
+      #    cat .mysh
+      #fi
+    fi
+}
+PROMPT_COMMAND="$PROMPT_COMMAND history -a; exec_myshellscripts;"
+
+# pip cache
+export PIP_DOWNLOAD_CACHE=$HOME/Library/Caches/pip-downloads
+
+# search history
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# history length
+HISTSIZE=1500
+HISTFILESIZE=3000
+
+PS1="$PS1\n-> "
+
+export PATH="/home/ukanga/dev/softwares/idea-IC-129.161/bin:/home/ukanga/dev/softwares/apache-maven-3.0.5/bin:$PATH"
+export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/tools:$PATH"
+export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/platform-tools:$PATH"
+export ANDROID_HOME=/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk
+export CHROME_BIN=/usr/bin/chromium-browser
+
+. ~/bash/completion/tmux.completion.bash
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# nose
+export REUSE_DB=1
