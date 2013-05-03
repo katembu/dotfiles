@@ -17,3 +17,7 @@ source makesymlinks.sh
 install_rvm(){
     curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
 }
+
+# set up vim
+test -e ~/.vim/bundle/vundle || git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
