@@ -2,7 +2,7 @@
 
 install_cmd="sudo apt-get install"
 
-$install_cmd vim tmux curl
+$install_cmd vim tmux curl python-dev python-setuptools python-pip
 
 sudo pip install virtualenvwrapper
 
