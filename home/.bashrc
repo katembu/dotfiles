@@ -117,6 +117,5 @@ if [ -f ~/.bashrc_custom ]; then
     . ~/.bashrc_custom
 fi
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /home/ukanga/.rvm/scripts/rvm
-export PATH=~/dev/softwares/calatrava/bin:/home/ukanga/.rvm/gems/ruby-1.9.3-p392@calatrava/bin:/home/ukanga/.rvm/gems/ruby-1.9.3-p392@global/bin:/home/ukanga/.rvm/rubies/ruby-1.9.3-p392/bin:/home/ukanga/.rvm/bin:/home/ukanga/dev/softwares/calatrava/bin:/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/platform-tools:/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/tools:/home/ukanga/dev/softwares/idea-IC-129.161/bin:/home/ukanga/dev/softwares/apache-maven-3.0.5/bin:/home/ukanga/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
