@@ -10,6 +10,9 @@ sudo pip install virtualenvwrapper
 mkdir -p $HOME/bash/completion
 cp $HOME/.dotfiles/bash/completion/* $HOME/bash/completion/
 
+# make symlinks
+source makesymlinks.sh
+
 # rvm
 install_rvm(){
     curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
