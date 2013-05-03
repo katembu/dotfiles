@@ -3,3 +3,5 @@
 	email = ukanga@gmail.com
 [color]
 	ui = auto
+[push]
+	default = simple
