@@ -1,22 +1,22 @@
 #!/bin/bash
 
-BACKUP_DIR="${HOME}/.dotfile_old"
+BACKUP_DIR="${HOME}/.old_dotfiles"
 DOTFILE_DIR="$HOME/.dotfiles"
 
 backup_dotfiles(){
-    mkdir -p $BACKUP_DIR
     for src in $DOTFILE_DIR/home/.*; do
         filename="$(basename ${src})"
         dest="$HOME/${filename}"
 
         [ -d "${src}" ] && continue
 
-        if [ -e "${dest}" ]; then
-            mv "${dest}" "${BACKUP_DIR}/" 
-        fi
-
         if [ -L "${dest}" ]; then
             unlink $dest
+        fi
+
+        if [ -e "${dest}" ]; then
+            test -e $BACKUP_DIR || mkdir -p $BACKUP_DIR
+            mv "${dest}" "${BACKUP_DIR}/" 
         fi
     done
 }
