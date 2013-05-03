@@ -42,10 +42,10 @@ HISTFILESIZE=3000
 
 PS1="$PS1\n-> "
 
-export PATH="/home/ukanga/dev/softwares/idea-IC-129.161/bin:/home/ukanga/dev/softwares/apache-maven-3.0.5/bin:$PATH"
-export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/tools:$PATH"
-export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/platform-tools:$PATH"
-export ANDROID_HOME=/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk
+#export PATH="/home/ukanga/dev/softwares/idea-IC-129.161/bin:/home/ukanga/dev/softwares/apache-maven-3.0.5/bin:$PATH"
+#export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/tools:$PATH"
+#export PATH="/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk/platform-tools:$PATH"
+#export ANDROID_HOME=/home/ukanga/dev/softwares/adt-bundle-linux-x86_64-20130219/sdk
 export CHROME_BIN=/usr/bin/chromium-browser
 
 . ~/bash/completion/tmux.completion.bash
@@ -54,3 +54,5 @@ export CHROME_BIN=/usr/bin/chromium-browser
 
 # nose
 export REUSE_DB=1
+
+export PATH="$HOME/.bin:$PATH"

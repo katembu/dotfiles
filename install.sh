@@ -10,6 +10,10 @@ sudo pip install virtualenvwrapper
 mkdir -p $HOME/bash/completion
 cp $HOME/.dotfiles/bash/completion/* $HOME/bash/completion/
 
+# .bin folder
+mkdir -p $HOME/.bin
+cp $HOME/.dotfiles/bin/* $HOME/.bin/
+
 # make symlinks
 source makesymlinks.sh
 
