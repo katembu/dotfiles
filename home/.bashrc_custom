@@ -56,3 +56,6 @@ export CHROME_BIN=/usr/bin/chromium-browser
 export REUSE_DB=1
 
 export PATH="$HOME/.bin:$PATH"
+
+# for tmux: export 256color
+[ -n "$TMUX" ] && export TERM=screen-256color
