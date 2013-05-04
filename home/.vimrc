@@ -114,3 +114,6 @@ set history=1000
 
 " default colorscheme
 colorscheme murphy
+
+" utf-8
+set encoding=utf-8
