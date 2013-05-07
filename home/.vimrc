@@ -8,6 +8,7 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Lokaltog/vim-distinguished'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
@@ -15,6 +16,7 @@ Bundle 'klen/vim-jsmode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'othree/html5.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 " The bundles you install will be listed here
 
@@ -99,9 +101,11 @@ endif
 " configure supertab
 let g:SuperTabDefaultCompletionType = "context"
 
+syntax enable
+
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-set background=dark
+set background=light
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -113,7 +117,7 @@ endif
 set history=1000
 
 " default colorscheme
-colorscheme murphy
+colorscheme desert
 
 " utf-8
 set encoding=utf-8
