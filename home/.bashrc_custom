@@ -56,6 +56,9 @@ export CHROME_BIN=/usr/bin/chromium-browser
 export REUSE_DB=1
 
 export PATH="$HOME/.bin:$PATH"
+export PATH=/home/ubuntu/dev/softwares/idea-IC-129.451/bin:$PATH
 
-# for tmux: export 256color
+export JDK_HOME=/usr/lib/jvm/default-java
+
+ #for tmux: export 256color
 [ -n "$TMUX" ] && export TERM=screen-256color
