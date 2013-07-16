@@ -107,3 +107,5 @@ fi)'
 
 alias mci='mvn clean install'
 alias screen="tmux"
+alias mount='sudo /bin/mount'
+alias umount='sudo /bin/umount'
